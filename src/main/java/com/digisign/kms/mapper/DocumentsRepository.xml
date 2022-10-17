@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.digisign.kms.repository.DocumentsRepository">
+    <resultMap id="BaseResultMap" type="com.digisign.kms.model.Documents">
+        <!--@JPA.Support generated on 2021-09-15 17:47:07.-->
+        <!--@Table documents-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="branch" jdbcType="VARCHAR" property="branch"/>
+        <result column="current_seq" jdbcType="INTEGER" property="currentSeq"/>
+        <result column="dealer_code" jdbcType="VARCHAR" property="dealerCode"/>
+        <result column="delete" jdbcType="BOOLEAN" property="delete"/>
+        <result column="eeuser" jdbcType="BIGINT" property="eeuser"/>
+        <result column="file" jdbcType="VARCHAR" property="file"/>
+        <result column="file_name" jdbcType="VARCHAR" property="fileName"/>
+        <result column="format_pdf" jdbcType="BIGINT" property="formatPdf"/>
+        <result column="id_doc_mitra" jdbcType="VARCHAR" property="idDocMitra"/>
+        <result column="kode_authorized" jdbcType="VARCHAR" property="kodeAuthorized"/>
+        <result column="last_proses" jdbcType="TIMESTAMP" property="lastProses"/>
+        <result column="path" jdbcType="VARCHAR" property="path"/>
+        <result column="payment" jdbcType="VARCHAR" property="payment"/>
+        <result column="proses" jdbcType="BOOLEAN" property="proses"/>
+        <result column="redirect" jdbcType="BOOLEAN" property="redirect"/>
+        <result column="rename" jdbcType="VARCHAR" property="rename"/>
+        <result column="sequence" jdbcType="BOOLEAN" property="sequence"/>
+        <result column="sign" jdbcType="BOOLEAN" property="sign"/>
+        <result column="signdoc" jdbcType="VARCHAR" property="signdoc"/>
+        <result column="status" jdbcType="VARCHAR" property="status"/>
+        <result column="type_document" jdbcType="VARCHAR" property="typeDocument"/>
+        <result column="userdata" jdbcType="BIGINT" property="userdata"/>
+        <result column="waktu_buat" jdbcType="TIMESTAMP" property="waktuBuat"/>
+        <result column="exp_date" jdbcType="TIMESTAMP" property="expDate"/>
+        <result column="exp" jdbcType="BOOLEAN" property="exp"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    <!--@JPA.Support generated on 2021-09-15 17:47:07.-->    id, branch, current_seq, dealer_code, `delete`, eeuser,
+        `file`, file_name, format_pdf, id_doc_mitra,
+        kode_authorized, last_proses, `path`, payment, proses, redirect, `rename`, `sequence`, sign, signdoc, `status`,
+        type_document, userdata, waktu_buat, exp_date, `exp`
+    </sql
+    >
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.digisign.kms.repository.SealCertRepository">
+    <resultMap id="BaseResultMap" type="com.digisign.kms.model.SealCert">
+        <!--@JPA.Support generated on 2021-09-16 11:21:30.-->
+        <!--@Table seal_cert-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="jenis_key" jdbcType="CHAR" property="jenisKey"/>
+        <result column="key_id" jdbcType="VARCHAR" property="keyId"/>
+        <result column="user_id" jdbcType="VARCHAR" property="userId"/>
+        <result column="key" jdbcType="VARCHAR" property="key"/>
+        <result column="waktu_buat" jdbcType="TIMESTAMP" property="waktuBuat"/>
+        <result column="status" jdbcType="CHAR" property="status"/>
+        <result column="waktu_exp" jdbcType="TIMESTAMP" property="waktuExp"/>
+        <result column="enc" jdbcType="BOOLEAN" property="enc"/>
+        <result column="mitra" jdbcType="BIGINT" property="mitra"/>
+        <result column="level" jdbcType="VARCHAR" property="level"/>
+        <result column="serial" jdbcType="VARCHAR" property="serial"/>
+        <result column="pair_key_id" jdbcType="BIGINT" property="pairKeyId"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@JPA.Support generated on 2021-09-16 11:21:30.-->
+        id, jenis_key, key_id, user_id, `key`, waktu_buat, `status`, waktu_exp, enc, mitra, `level`, serial, pair_key_id
+    </sql>
+</mapper>

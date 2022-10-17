@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.digisign.kms.repository.EeuserRepository">
+    <resultMap id="BaseResultMap" type="com.digisign.kms.model.Eeuser">
+        <!--@JPA.Support generated on 2021-09-15 17:47:11.-->
+        <!--@Table eeuser-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="nick" jdbcType="VARCHAR" property="nick"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="deleted" jdbcType="BOOLEAN" property="deleted"/>
+        <result column="mid" jdbcType="BIGINT" property="mid"/>
+        <result column="userdata" jdbcType="BIGINT" property="userdata"/>
+        <result column="time" jdbcType="TIMESTAMP" property="time"/>
+        <result column="status" jdbcType="CHAR" property="status"/>
+        <result column="imei" jdbcType="VARCHAR" property="imei"/>
+        <result column="pay_type" jdbcType="CHAR" property="payType"/>
+        <result column="mitra" jdbcType="BIGINT" property="mitra"/>
+        <result column="no_handphone" jdbcType="VARCHAR" property="noHandphone"/>
+        <result column="npwp" jdbcType="VARCHAR" property="npwp"/>
+        <result column="i_ktp" jdbcType="VARCHAR" property="iKtp"/>
+        <result column="i_npwp" jdbcType="VARCHAR" property="iNpwp"/>
+        <result column="i_wajah" jdbcType="VARCHAR" property="iWajah"/>
+        <result column="i_wajah2" jdbcType="VARCHAR" property="iWajah2"/>
+        <result column="i_ttd" jdbcType="VARCHAR" property="iTtd"/>
+        <result column="admin" jdbcType="BOOLEAN" property="admin"/>
+        <result column="auto_ttd" jdbcType="BOOLEAN" property="autoTtd"/>
+        <result column="i_wajah3" jdbcType="VARCHAR" property="iWajah3"/>
+        <result column="login" jdbcType="BIGINT" property="login"/>
+        <result column="key_at_ttd" jdbcType="VARCHAR" property="keyAtTtd"/>
+        <result column="i_qrcode" jdbcType="VARCHAR" property="iQrcode"/>
+        <result column="position" jdbcType="BIGINT" property="position"/>
+        <result column="block_send_doc" jdbcType="BOOLEAN" property="blockSendDoc"/>
+        <result column="confirm_tnc" jdbcType="BOOLEAN" property="confirmTnc"/>
+        <result column="kode_user" jdbcType="VARCHAR" property="kodeUser"/>
+        <result column="branch" jdbcType="BIGINT" property="branch"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    <!--@JPA.Support generated on 2021-09-15 17:47:11.-->    id, nick, `password`, `name`, deleted, mid, userdata,
+        `time`, `status`, imei, pay_type, mitra, no_handphone, npwp, i_ktp, i_npwp, i_wajah, i_wajah2, i_ttd, `admin`,
+        auto_ttd, i_wajah3, `login`, key_at_ttd, i_qrcode, `
+        position`, block_send_doc, confirm_tnc, kode_user, branch
+    </
+            sql>
+</mapper>

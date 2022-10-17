@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.digisign.kms.repository.UserSealRepository">
+    <resultMap id="BaseResultMap" type="com.digisign.kms.model.UserSeal">
+        <!--@JPA.Support generated on 2021-09-29 13:45:38.-->
+        <!--@Table user_seal-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="seal" jdbcType="BIGINT" property="seal"/>
+        <result column="eeuser" jdbcType="BIGINT" property="eeuser"/>
+        <result column="status" jdbcType="BOOLEAN" property="status"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@JPA.Support generated on 2021-09-29 13:45:38.-->
+        id, seal, eeuser, `status`
+    </sql>
+</mapper>

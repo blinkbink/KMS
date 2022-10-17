@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.digisign.kms.repository.SealRepository">
+    <resultMap id="BaseResultMap" type="com.digisign.kms.model.Seal">
+        <!--@JPA.Support generated on 2021-09-29 13:45:32.-->
+        <!--@Table seal-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="mitra" jdbcType="BIGINT" property="mitra"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="image" jdbcType="VARCHAR" property="image"/>
+        <result column="seal_with_qr" jdbcType="BOOLEAN" property="sealWithQr"/>
+        <result column="image_qr" jdbcType="VARCHAR" property="imageQr"/>
+        <result column="example_path" jdbcType="VARCHAR" property="examplePath"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@JPA.Support generated on 2021-09-29 13:45:32.-->
+        id, `name`, mitra, `password`, image, seal_with_qr, image_qr, example_path
+    </sql>
+</mapper>

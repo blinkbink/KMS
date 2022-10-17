@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.digisign.kms.repository.SealDocAccessRepository">
+    <resultMap id="BaseResultMap" type="com.digisign.kms.model.SealDocAccess">
+        <!--@JPA.Support generated on 2021-09-29 13:45:36.-->
+        <!--@Table seal_doc_access-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="user_seal" jdbcType="BIGINT" property="userSeal"/>
+        <result column="doc_access" jdbcType="BIGINT" property="docAccess"/>
+        <result column="qr_text" jdbcType="VARCHAR" property="qrText"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@JPA.Support generated on 2021-09-29 13:45:36.-->
+        id, user_seal, doc_access, qr_text
+    </sql>
+</mapper>

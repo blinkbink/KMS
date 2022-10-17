@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.digisign.kms.repository.EmployeeSigningConfigRepository">
+    <resultMap id="BaseResultMap" type="com.digisign.kms.model.EmployeeSigningConfig">
+        <!--@JPA.Support generated on 2021-09-17 15:57:48.-->
+        <!--@Table employee_signing_config-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="mitra" jdbcType="BIGINT" property="mitra"/>
+        <result column="signature_with_qr" jdbcType="BOOLEAN" property="signatureWithQr"/>
+        <result column="qr_logo_img" jdbcType="VARCHAR" property="qrLogoImg"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@JPA.Support generated on 2021-09-17 15:57:48.-->
+        id, mitra, signature_with_qr, qr_logo_img
+    </sql>
+</mapper>

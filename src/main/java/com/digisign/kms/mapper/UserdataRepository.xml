@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.digisign.kms.repository.UserdataRepository">
+    <resultMap id="BaseResultMap" type="com.digisign.kms.model.Userdata">
+        <!--@JPA.Support generated on 2021-09-16 10:33:49.-->
+        <!--@Table userdata-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="no_identitas" jdbcType="VARCHAR" property="noIdentitas"/>
+        <result column="nama" jdbcType="VARCHAR" property="nama"/>
+        <result column="jk" jdbcType="CHAR" property="jk"/>
+        <result column="tempat_lahir" jdbcType="VARCHAR" property="tempatLahir"/>
+        <result column="tgl_lahir" jdbcType="DATE" property="tglLahir"/>
+        <result column="kelurahan" jdbcType="VARCHAR" property="kelurahan"/>
+        <result column="alamat" jdbcType="VARCHAR" property="alamat"/>
+        <result column="kecamatan" jdbcType="VARCHAR" property="kecamatan"/>
+        <result column="kota" jdbcType="VARCHAR" property="kota"/>
+        <result column="propinsi" jdbcType="VARCHAR" property="propinsi"/>
+        <result column="kodepos" jdbcType="VARCHAR" property="kodepos"/>
+        <result column="no_handphone" jdbcType="VARCHAR" property="noHandphone"/>
+        <result column="npwp" jdbcType="VARCHAR" property="npwp"/>
+        <result column="i_ktp" jdbcType="VARCHAR" property="iKtp"/>
+        <result column="i_npwp" jdbcType="VARCHAR" property="iNpwp"/>
+        <result column="i_wajah" jdbcType="VARCHAR" property="iWajah"/>
+        <result column="mitra" jdbcType="BIGINT" property="mitra"/>
+        <result column="i_wajah2" jdbcType="VARCHAR" property="iWajah2"/>
+        <result column="fingerprint1" jdbcType="VARCHAR" property="fingerprint1"/>
+        <result column="fingerprint2" jdbcType="VARCHAR" property="fingerprint2"/>
+        <result column="i_ttd" jdbcType="VARCHAR" property="iTtd"/>
+        <result column="i_wajah3" jdbcType="VARCHAR" property="iWajah3"/>
+        <result column="wn" jdbcType="CHAR" property="wn"/>
+        <result column="id_type" jdbcType="CHAR" property="idType"/>
+        <result column="kebangsaan" jdbcType="VARCHAR" property="kebangsaan"/>
+        <result column="i_kitas" jdbcType="VARCHAR" property="iKitas"/>
+        <result column="kitas" jdbcType="VARCHAR" property="kitas"/>
+        <result column="level" jdbcType="VARCHAR" property="level"/>
+        <result column="verifier" jdbcType="BIGINT" property="verifier"/>
+        <result column="score_face" jdbcType="VARCHAR" property="scoreFace"/>
+        <result column="i_wajah_dukcapil" jdbcType="VARCHAR" property="iWajahDukcapil"/>
+        <result column="i_wefie" jdbcType="VARCHAR" property="iWefie"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@JPA.Support generated on 2021-09-16 10:33:49.-->
+        id, no_identitas, nama, jk, tempat_lahir, tgl_lahir, kelurahan, alamat, kecamatan, kota, propinsi, kodepos,
+        no_handphone, npwp, i_ktp, i_npwp, i_wajah, mitra, i_wajah2, fingerprint1, fingerprint2, i_ttd, i_wajah3, wn,
+        id_type, kebangsaan, i_kitas, kitas, `level`, verifier, score_face, i_wajah_dukcapil, i_wefie
+    </sql>
+</mapper>

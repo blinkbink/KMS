@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.digisign.kms.repository.MitraRepository">
+    <resultMap id="BaseResultMap" type="com.digisign.kms.model.Mitra">
+        <!--@JPA.Support generated on 2021-09-17 14:54:52.-->
+        <!--@Table mitra-->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="i_siup" jdbcType="VARCHAR" property="iSiup"/>
+        <result column="eeuser" jdbcType="BIGINT" property="eeuser"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="gedung" jdbcType="VARCHAR" property="gedung"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="fax" jdbcType="VARCHAR" property="fax"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="custom" jdbcType="BOOLEAN" property="custom"/>
+        <result column="logo" jdbcType="VARCHAR" property="logo"/>
+        <result column="help_email" jdbcType="VARCHAR" property="helpEmail"/>
+        <result column="verifikasi" jdbcType="BOOLEAN" property="verifikasi"/>
+        <result column="notifikasi" jdbcType="BOOLEAN" property="notifikasi"/>
+        <result column="i_npwp" jdbcType="VARCHAR" property="iNpwp"/>
+        <result column="i_tdp" jdbcType="VARCHAR" property="iTdp"/>
+        <result column="i_akta_perusahaan" jdbcType="VARCHAR" property="iAktaPerusahaan"/>
+        <result column="i_surat_domisili" jdbcType="VARCHAR" property="iSuratDomisili"/>
+        <result column="no_npwp" jdbcType="VARCHAR" property="noNpwp"/>
+        <result column="no_siup" jdbcType="VARCHAR" property="noSiup"/>
+        <result column="no_tdp" jdbcType="VARCHAR" property="noTdp"/>
+        <result column="no_akta_perusahaan" jdbcType="VARCHAR" property="noAktaPerusahaan"/>
+        <result column="no_surat_domisili" jdbcType="VARCHAR" property="noSuratDomisili"/>
+        <result column="email_corporate" jdbcType="VARCHAR" property="emailCorporate"/>
+        <result column="parent_id" jdbcType="BIGINT" property="parentId"/>
+        <result column="ekyc" jdbcType="BOOLEAN" property="ekyc"/>
+        <result column="level" jdbcType="VARCHAR" property="level"/>
+        <result column="activation_redirect" jdbcType="VARCHAR" property="activationRedirect"/>
+        <result column="signing_redirect" jdbcType="VARCHAR" property="signingRedirect"/>
+        <result column="dukcapil" jdbcType="BOOLEAN" property="dukcapil"/>
+        <result column="view_redirect" jdbcType="VARCHAR" property="viewRedirect"/>
+        <result column="ekyc_tabungan" jdbcType="BOOLEAN" property="ekycTabungan"/>
+        <result column="user_sftp" jdbcType="VARCHAR" property="userSftp"/>
+        <result column="have_cabang" jdbcType="BOOLEAN" property="haveCabang"/>
+        <result column="transaction_p12" jdbcType="BOOLEAN" property="transactionP12"/>
+        <result column="gen_cert_user" jdbcType="VARCHAR" property="genCertUser"/>
+        <result column="kategori_usaha" jdbcType="BIGINT" property="kategoriUsaha"/>
+        <result column="provinsi" jdbcType="VARCHAR" property="provinsi"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@JPA.Support generated on 2021-09-17 14:54:52.-->
+        id, `name`, `type`, i_siup, eeuser, address, phone, gedung, url, fax, content, custom, logo, help_email,
+        verifikasi, notifikasi, i_npwp, i_tdp, i_akta_perusahaan, i_surat_domisili, no_npwp, no_siup, no_tdp,
+        no_akta_perusahaan, no_surat_domisili, email_corporate, parent_id, ekyc, `level`, activation_redirect,
+        signing_redirect, dukcapil, view_redirect, ekyc_tabungan, user_sftp, have_cabang, transaction_p12,
+        gen_cert_user, kategori_usaha, provinsi
+    </sql>
+</mapper>
