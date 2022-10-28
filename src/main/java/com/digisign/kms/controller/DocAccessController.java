@@ -64,6 +64,9 @@ public class DocAccessController extends Description {
     InitialsRepository initialsRepository;
 
     @Autowired
+    PersonalSigningConfigRepository PSRepository;
+
+    @Autowired
     SealCertService sealCertService;
 
     @Autowired
@@ -615,6 +618,7 @@ public class DocAccessController extends Description {
                         Date expiredDate = null;
                         Long userMitra = null;
                         Long senderMitra = null;
+//                        Boolean personal_signature_with_qr = false;
 
                         if (dataSign.get(i).getDocumentBean().getEeuserBean().getMitraBean() != null)
                         {
@@ -626,6 +630,11 @@ public class DocAccessController extends Description {
                             //cek user yang tandatangan
                             userMitra = dataSign.get(i).getEeuserBean().getUserdataBean().getMitraBean().getId();
                         }
+
+//                        if(dataSign.get(i).getEeuserBean().getSignature_with_qr())
+//                        {
+//                            personal_signature_with_qr = true;
+//                        }
 
                         Long eeuserMitra = null;
                         if(dataSign.get(i).getEeuserBean().getMitraBean() != null) {
@@ -729,6 +738,7 @@ public class DocAccessController extends Description {
                                 {
                                     descOnly=mitraSigningConfig.getSignatureDescOnly();
                                 }
+
                                 LogSystem.info("User signing mitra " + eeuserMitra);
                                 LogSystem.info("Sender doc mitra " + senderMitra);
 
@@ -739,29 +749,53 @@ public class DocAccessController extends Description {
 //                            if(!userSignData.getDescOnly() && (Objects.equals(userMitra, eeuserMitra)))
                             if(!userSignData.getDescOnly())
                             {
-                                EmployeeSigningConfig escConfig = null;
-                                if (eeuserMitra!=null)
-                                {
-                                    escConfig = escRepo.getByMitra(eeuserMitra);
-                                }
 
-                                if(escConfig != null)
+                                PersonalSigningConfig ps = PSRepository.getByUser(dataSign.get(i).getEeuserBean().getId());
+                                LogSystem.info("eeuser " + dataSign.get(i).getEeuserBean().getId());
+                                LogSystem.info("Personal Signing Config " + ps);
+                                if(eeuserMitra == null && ps != null)
                                 {
-                                    LogSystem.info("Employee signing config not null");
-                                    signWQR=escConfig.getSignatureWithQr();
-                                    pathLogo=escConfig.getQrLogoImg();
-                                    userSignData.setPathLogo(pathLogo);
-                                    userSignData.setWithQR(signWQR);
+                                    LogSystem.info("Personal Signature With QR");
+//                                    signWQR=true;
+//                                    pathLogo="/file2/data-DS/logoQR/digisign.png";
+                                    userSignData.setPathLogo(ps.getQrLogoImg());
+                                    userSignData.setWithQR(ps.getSignatureWithQr());
 
                                     //setting request allobank
                                     if(userSignData.isWithQR())
                                     {
-                                        userSignData.setPosition(escConfig.getPosition());
+                                        userSignData.setPosition(1);
                                     }
 
-                                    userSignData.setWithSignature(escConfig.getSignature());
-                                    userSignData.setQrOnly(escConfig.getQrOnly());
+                                    userSignData.setWithSignature(false);
+                                    userSignData.setQrOnly(false);
                                 }
+                                else {
+                                    EmployeeSigningConfig escConfig = null;
+                                    if (eeuserMitra!=null)
+                                    {
+                                        escConfig = escRepo.getByMitra(eeuserMitra);
+                                    }
+
+                                    if(escConfig != null)
+                                    {
+                                        LogSystem.info("Employee signing config not null");
+                                        signWQR=escConfig.getSignatureWithQr();
+                                        pathLogo=escConfig.getQrLogoImg();
+                                        userSignData.setPathLogo(pathLogo);
+                                        userSignData.setWithQR(signWQR);
+
+                                        //setting request allobank
+                                        if(userSignData.isWithQR())
+                                        {
+                                            userSignData.setPosition(escConfig.getPosition());
+                                        }
+
+                                        userSignData.setWithSignature(escConfig.getSignature());
+                                        userSignData.setQrOnly(escConfig.getQrOnly());
+                                    }
+                                }
+
                             }
                         }
 
